@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="app_name">条码扫描器1</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_custom_product_search">自定义搜索</string>
+    <string name="button_ok">确定</string>
+    <string name="button_share_by_email">通过 E-mail 分享</string>
+    <string name="button_share_by_sms">通过短信分享</string>
+    <string name="button_web_search">网页搜索</string>
+    <string name="msg_default_mms_subject">Hi</string>
+    <string name="msg_intent_failed">抱歉，无法打开应用。条码内容可能无效。</string>
+    <string name="result_text">找到纯文本</string>
+
+</resources>
