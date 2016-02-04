@@ -26,7 +26,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.KeyEvent;
@@ -218,7 +217,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   private void handleDecodeInternally(Result rawResult, ResultHandler resultHandler, Bitmap barcode) {
 
     CharSequence displayContents = resultHandler.getDisplayContents();
-    System.out.println("--------getDisplayContents------------->"+displayContents);
+    System.out.println("--------getDisplayContents------>"+displayContents);
 
     viewfinderView.setVisibility(View.GONE);
     resultView.setVisibility(View.VISIBLE);
@@ -258,13 +257,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       // java.?lang.?RuntimeException: Fail to connect to camera service
       Log.w(TAG, "Unexpected error initializing camera", e);
     }
-  }
-
-  public void restartPreviewAfterDelay(long delayMS) {
-    if (handler != null) {
-      handler.sendEmptyMessageDelayed(R.id.restart_preview, delayMS);
-    }
-    resetStatusView();
   }
 
   private void resetStatusView() {
